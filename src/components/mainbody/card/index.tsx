@@ -1,3 +1,4 @@
+import * as Fa from 'react-icons/fa'
 import * as S from "./style"
 
 export const Card = () => {
@@ -5,12 +6,18 @@ export const Card = () => {
         <S.CardContainer>
             <S.HeadSection>
                 <img src="https://images.pexels.com/photos/3475617/pexels-photo-3475617.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
+                <S.HeadTagSection>
+                    <span>Italiana</span>
+                    <span>Destaque da Semana</span>
+                    <span>Japonesa</span>
+                </S.HeadTagSection>
             </S.HeadSection>
             <S.BodySection>
                 <S.Bodyheader>
                     <h3>Hioki Sushi</h3>
                     <div>
                         <h3>4.9</h3>
+                        <Fa.FaStar />
                     </div>
                 </S.Bodyheader>
                 <S.Bodydescription>
