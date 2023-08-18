@@ -1,8 +1,9 @@
 
 export const fonts = {
-    tall    : '1.75em',
+    big     : '2em',
+    tall    : '1.5em',
     medium  : '1.125em', 
-    small   : '0.875em',
+    small   : '14px',
     tiny    : '0.625em'
 }
 
@@ -15,6 +16,7 @@ export const colors = {
     },
     fonts: {
         primary: '#E66767',
-        secondary: '#FFEBD9'
+        secondary: '#FFEBD9',
+        ternary: '#FFFFFF',
     }
 }

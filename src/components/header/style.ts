@@ -1,6 +1,6 @@
 import { styled } from "styled-components";
 import urlSvg from '../../assets/img/Vector.svg'
-import { Wrapper } from "../../global/styles/main.styles";
+import { Wrapper, WrapperFlexCenter } from "../../global/styles/main.styles";
 import { colors, fonts } from "../../global/styles/main.vars";
 
 type Props = {
@@ -8,8 +8,6 @@ type Props = {
 }
 export const HeaderWrapper = styled(Wrapper)<Props>`
     position: relative;
-    z-index: -1;
-
     &::before {
       content: "";
       position: absolute;
@@ -18,30 +16,25 @@ export const HeaderWrapper = styled(Wrapper)<Props>`
       width: 100%;
       height: 100%;
       background: url(${urlSvg});
-      z-index: -3;
+      z-index: 0;
       background-size: contain;
     }
 `
 
-export const HomeHeader = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+export const HomeHeader = styled(WrapperFlexCenter)`
+    height: 80%;
+    justify-content: space-around;
     & img {
         width: 90px;
-        margin-bottom: 100px;
     }
 
     & p {        
-        width:539px;
         text-align: center;
         font-size: ${fonts.tall};
         font-weight: 900;
         color: ${colors.fonts.primary};
+        inline-size: 85%;
+        overflow-wrap: break-word;
     }
 
 `

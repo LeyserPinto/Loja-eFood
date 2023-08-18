@@ -1,37 +1,32 @@
 import * as Fa from 'react-icons/fa'
 import * as S from "./style"
+import type { Restaurant } from '../../../global/features/utils/Models/restaurants'
 
-export const Card = () => {
+
+export const Card = ({nome, avaliacao, descricao, urlPortada, categories, id}: Restaurant) => {
     return (
         <S.CardContainer>
             <S.HeadSection>
-                <img src="https://images.pexels.com/photos/3475617/pexels-photo-3475617.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
+                <img src={urlPortada} alt={nome} />
                 <S.HeadTagSection>
-                    <span>Italiana</span>
-                    <span>Destaque da Semana</span>
-                    <span>Japonesa</span>
+                    {categories.map(row => (
+                        <span key={`${id}-tag`}>{row}</span>
+                    ))}
                 </S.HeadTagSection>
             </S.HeadSection>
             <S.BodySection>
                 <S.Bodyheader>
-                    <h3>Hioki Sushi</h3>
+                    <h3>{nome}</h3>
                     <div>
-                        <h3>4.9</h3>
+                        <h3>{avaliacao}</h3>
                         <Fa.FaStar />
                     </div>
                 </S.Bodyheader>
                 <S.Bodydescription>
-                    <p>
-                        Peça já o melhor da culinária japonesa no 
-                        conforto da sua casa! Sushis frescos, 
-                        sashimis deliciosos e pratos quentes irresistíveis. 
-                        Entrega rápida, embalagens cuidadosas e qualidade 
-                        garantida. Experimente o Japão sem sair do lar 
-                        com nosso delivery!
-                    </p>
+                    <p>{descricao}</p>
                 </S.Bodydescription>
                 <S.Bodybuttons>
-                    <button>Saiba Mais</button>
+                    <S.Bodybutton to="/cardapio">Ver Cardapio</S.Bodybutton>
                 </S.Bodybuttons>
             </S.BodySection>
         </S.CardContainer>

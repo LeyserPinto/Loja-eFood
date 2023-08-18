@@ -1,10 +1,8 @@
-import { Categories } from '../Enum/EnumCategory'
-
 export type Restaurant = {
     id: number,
-    name: string,
+    nome: string,
     descricao: string,
     avaliacao: number,
-    categories : Categories,
+    categories : string[],
     urlPortada: string
 }

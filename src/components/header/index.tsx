@@ -11,5 +11,4 @@ const Header = () => {
         </S.HeaderWrapper>
     )
 }
-
 export default Header

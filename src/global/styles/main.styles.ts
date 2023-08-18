@@ -1,10 +1,9 @@
 import {createGlobalStyle, styled} from "styled-components";
-import { colors } from "./main.vars";
+import { colors, fonts } from "./main.vars";
+import { Link } from "react-router-dom";
 
 
 export const GlobalStyle = createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
-
   * {    
     margin: 0;
     padding: 0;
@@ -26,4 +25,25 @@ export const Container = styled.div<ContainerProps>`
 export const Wrapper = styled.div`
     height: 300px;
     background-color: ${colors.background.secondary};
+`
+
+export const WrapperFlexCenter = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+`
+
+export const ButtonLink = styled(Link)`
+    padding: 4px 6px;
+    background: ${colors.background.quaternary};
+    color: ${colors.fonts.secondary};
+    font-weight: 700;
+    border: none;
+    font-size: ${fonts.small};
+    cursor: pointer;
+    text-decoration: none;
 `

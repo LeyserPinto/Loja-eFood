@@ -1,5 +1,6 @@
 import { styled } from "styled-components";
 import { colors, fonts } from "../../../global/styles/main.vars";
+import { ButtonLink } from "../../../global/styles/main.styles";
 
 export const CardContainer = styled.div`
     display: grid;
@@ -72,12 +73,7 @@ export const Bodydescription = styled.section`
 
 export const Bodybuttons = styled.section`
     margin-top: 1em;
-    & button {
-        padding: 4px 6px;
-        background: ${colors.background.quaternary};
-        color: ${colors.fonts.secondary};
-        font-weight: 700;
-        border: none;
-    }
-
+    
 `
+
+export const Bodybutton = styled(ButtonLink)``
