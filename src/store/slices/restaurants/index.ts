@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit'
 // import { PayloadAction } from '@reduxjs/toolkit'
 
-import { Restaurant } from '../../utils/Models/restaurants'
+import { Restaurant } from '../../../global/utils/Models/restaurants'
 
 
 
@@ -44,7 +44,6 @@ export const restaurantsSlice = createSlice({
   name: 'restaurants',
   initialState,
   reducers: {
-   
   },
 })
 

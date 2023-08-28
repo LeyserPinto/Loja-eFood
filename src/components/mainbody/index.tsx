@@ -1,17 +1,22 @@
-import { useSelector } from "react-redux"
-import { Container } from "../../global/styles/main.styles"
+import { ApiMessage, Container } from "../../global/styles/main.styles"
 import { Card } from "./card"
 import { Bodywrapper } from "./style"
-import { RootState } from "../../global/store"
-
+import { useGetAllRestaurantsQuery } from "../../services/api"
 
 
 export const Mainbody = () => {
-    const restaurants = useSelector((state:RootState) => state.restaurantReducer.list)
+    const { data, isLoading, isError } = useGetAllRestaurantsQuery();
+    console.log(isLoading);
+    console.log('Erro:' + isError);
+
     return (
         <Container maxWidth="900px">
             <Bodywrapper>
-                {restaurants.map(row => (
+
+                {isLoading && <ApiMessage>Carregando...</ApiMessage>}
+                {isError && <ApiMessage>Um <strong>ERRO</strong> aconteceu na coleita de dados...</ApiMessage>}
+
+                {data?.map(row => (
                     <Card
                      key={row.id}
                      id={row.id}

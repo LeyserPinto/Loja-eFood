@@ -4,6 +4,7 @@ import * as S from './styles'
 
 const Cardapiobody = () => {
     return (
+        <>
         <Container maxWidth="1024px">
             <S.Bodywrapper>
                 <Pratocard />
@@ -14,6 +15,9 @@ const Cardapiobody = () => {
                 <Pratocard />
             </S.Bodywrapper>
         </Container>
+        </>
+
+        
     )
 }
 

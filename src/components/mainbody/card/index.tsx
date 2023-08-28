@@ -1,6 +1,6 @@
 import * as Fa from 'react-icons/fa'
 import * as S from "./style"
-import type { Restaurant } from '../../../global/features/utils/Models/restaurants'
+import type { Restaurant } from '../../../global/utils/Models/restaurants'
 
 
 export const Card = ({nome, avaliacao, descricao, urlPortada, categories, id}: Restaurant) => {
