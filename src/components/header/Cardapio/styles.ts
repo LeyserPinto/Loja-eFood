@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { colors, fonts } from "../../../global/styles/main.vars";
 
 export const Header = styled(HeaderWrapper)`
-    height: 185px;
+    height: 186px;
 `
 export const HeadWrapper = styled(WrapperFlexCenter)`
     width: 80%;
@@ -33,7 +33,7 @@ type HeroProps = {
 export const HeadHero = styled.section<HeroProps>`
     position: relative;
     width: 100%;
-    height: 350px;
+    height: 280px;
     background: linear-gradient(45deg, rgba(0,0,0,0.50), rgba(0,0,0,0.50)), url(${(props)=>props.restaurantbg});
     background-size: cover;
 `

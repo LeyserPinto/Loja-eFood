@@ -26,7 +26,7 @@ export const Card = ({nome, avaliacao, descricao, urlPortada, categories, id}: R
                     <p>{descricao}</p>
                 </S.Bodydescription>
                 <S.Bodybuttons>
-                    <S.Bodybutton to="/cardapio">Ver Cardapio</S.Bodybutton>
+                    <S.Bodybutton to="/cardapio">Saiba mais</S.Bodybutton>
                 </S.Bodybuttons>
             </S.BodySection>
         </S.CardContainer>

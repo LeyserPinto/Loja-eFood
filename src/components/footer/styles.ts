@@ -11,7 +11,7 @@ export const FooterFlex = styled(WrapperFlexCenter) `
     height: 80%;    
     justify-content: space-between;
     & img{
-        width: 90px;
+        width: 125px;
     }
 
     & p {

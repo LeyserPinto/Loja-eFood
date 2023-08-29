@@ -1,10 +1,10 @@
 
 export const fonts = {
-    big     : '2em',
+    big     : '2.25em',
     tall    : '1.5em',
     medium  : '1.125em', 
     small   : '14px',
-    tiny    : '0.625em'
+    tiny    : '12px'
 }
 
 export const colors = {

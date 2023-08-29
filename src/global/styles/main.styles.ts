@@ -19,10 +19,10 @@ type ContainerProps = {
   maxWidth?: string
 }
 export const Container = styled.div<ContainerProps>`
-    max-width: ${(props) => props.maxWidth || '1366px'};
+    max-width: ${(props) => props.maxWidth};
     margin: 0 auto;
 `
-export const Wrapper = styled.div`
+export const Wrapper = styled.div<ContainerProps>`
     height: 300px;
     background-color: ${colors.background.secondary};
 `
@@ -38,7 +38,9 @@ export const WrapperFlexCenter = styled.div`
 `
 
 export const ButtonLink = styled(Link)`
-    padding: 4px 6px;
+    display: block;
+    width: 82px;
+    height: 26px;
     background: ${colors.background.quaternary};
     color: ${colors.fonts.secondary};
     font-weight: 700;
@@ -46,6 +48,8 @@ export const ButtonLink = styled(Link)`
     font-size: ${fonts.small};
     cursor: pointer;
     text-decoration: none;
+    line-height: 26px;
+    text-align: center;
 `
 
 export const ModalContainer = styled.div`

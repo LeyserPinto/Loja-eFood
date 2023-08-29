@@ -8,6 +8,7 @@ type Props = {
 }
 export const HeaderWrapper = styled(Wrapper)<Props>`
     position: relative;
+    height: 384px;
     &::before {
       content: "";
       position: absolute;
@@ -23,14 +24,14 @@ export const HeaderWrapper = styled(Wrapper)<Props>`
 
 export const HomeHeader = styled(WrapperFlexCenter)`
     height: 80%;
-    justify-content: space-around;
+    justify-content: space-between;
     & img {
-        width: 90px;
+        width: 125px;
     }
 
     & p {        
         text-align: center;
-        font-size: ${fonts.tall};
+        font-size: ${fonts.big};
         font-weight: 900;
         color: ${colors.fonts.primary};
         inline-size: 85%;

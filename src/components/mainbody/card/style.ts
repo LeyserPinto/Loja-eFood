@@ -4,8 +4,9 @@ import { ButtonLink } from "../../../global/styles/main.styles";
 
 export const CardContainer = styled.div`
     display: grid;
-    grid-template-rows: auto 190px;
+    grid-template-rows: 217px 181px;
     border: thin solid ${colors.fonts.primary};
+    background-color: ${colors.background.ternary};
     overflow: hidden;
 `
 
@@ -14,29 +15,33 @@ export const HeadSection = styled.div`
     overflow: hidden;
     & img {
         width: 100%;
+
         object-fit: contain;
-        object-position: 0px -75px;
     }
 `
 
 export const HeadTagSection = styled.div`
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 5px;
+    right: 5px;
     width: 50%;
     display: flex;
     justify-content: flex-end;
     flex-wrap:wrap;
+    gap: 12px;
+
+    
     
 
     & span {
-        margin: 5px;
-        padding: 4px 6px;
+        min-width: 61px;
+        height: 26px;
         background-color: ${colors.background.quaternary};
         font-size: ${fonts.tiny};
         color: ${colors.fonts.secondary};
         font-weight: 700;
         text-align: center;
+        line-height: 26px;
     }
 `
 
@@ -44,7 +49,7 @@ export const BodySection = styled.div`
     padding: 8px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-evenly;
 `
 
 export const Bodyheader = styled.section`
@@ -60,7 +65,7 @@ export const Bodyheader = styled.section`
 
         & svg {
             margin-left: 5px;
-            width: 20.999698638916016px;
+            width: 20.99px;
             height: 20px;
             fill: #FFB930;
         }
