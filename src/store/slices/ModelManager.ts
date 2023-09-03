@@ -3,12 +3,12 @@ import { EnumAcoes } from "../../global/utils/Enum";
 import { Prato } from "../../global/utils/Models/prato";
 
 type ManagerProps = {
-    isModelOpen: boolean,
+    isModalOpen: boolean,
     acaoCodigo: number,
     prato?: Prato
 }
 
-const initialState = {
+const initialState: ManagerProps= {
     isModalOpen: false,
     acaoCodigo: EnumAcoes.ACAO_CONSULTA,
     prato: {

@@ -19,13 +19,13 @@ const Modal = () => {
                                 <Icon.AiOutlineClose />
                             </CloseModalButton>   
                             <ModalWrapper>
-                                <img src={prato.picture}/>
+                                <img src={prato?.picture}/>
                                 <WrapperContent>
                                     <Texts>
-                                        <h4>{prato.nome}</h4>
-                                        <p>{prato.descricao}</p>
+                                        <h4>{prato?.nome}</h4>
+                                        <p>{prato?.descricao}</p>
                                     </Texts>                                    
-                                    <button>Adicionar ao Carrinho - {prato.price}</button>
+                                    <button>Adicionar ao Carrinho - {prato?.price}</button>
                                 </WrapperContent>
                             </ModalWrapper>                         
                         </ModalPrato>

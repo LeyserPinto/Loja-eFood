@@ -1,4 +1,4 @@
-import { ApiMessage, Container } from "../../global/styles/main.styles"
+import { ApiMessage } from "../../global/styles/main.styles"
 import { Card } from "./card"
 import { Bodywrapper, MainContainer } from "./style"
 import { useGetAllRestaurantsQuery } from "../../services/api"
