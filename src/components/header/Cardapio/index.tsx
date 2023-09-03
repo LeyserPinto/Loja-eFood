@@ -1,8 +1,13 @@
 import Logo from '../../../assets/img/logo.svg'
 import { Container } from '../../../global/styles/main.styles'
+import { Restaurant } from '../../../global/utils/Models/restaurants'
 import * as S from './styles'
 
-const HeaderCardapio = () => {
+type RestaurantProps = {
+    restaurante?: Restaurant[]
+}
+
+const HeaderCardapio = ({restaurante}:RestaurantProps) => {
     return (
         <Container>
             <S.Header>
@@ -17,12 +22,18 @@ const HeaderCardapio = () => {
                 </S.CarrinhoSection>
                 </S.HeadWrapper>
             </S.Header>
-            <S.HeadHero restaurantbg='https://www.djapa.com.br/wp-content/uploads/2020/05/culinaria-japonesa.jpg'>
+            {
+                restaurante?.map((row:Restaurant) => (
+            <S.HeadHero key={row.nome} restaurantbg={row.urlPortada}>
                 <S.HeroWrapper>
-                    <p>Lorem Ipsum</p>
-                    <h3>Italiana</h3>
+
+                    <p>{row.categories}</p>
+                    <h3>{row.nome}</h3>
                 </S.HeroWrapper>
             </S.HeadHero>
+                ))
+            }
+            
         </Container>
     )
 }

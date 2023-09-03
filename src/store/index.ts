@@ -1,14 +1,14 @@
 import { configureStore } from '@reduxjs/toolkit'
-import restaurantSlice from './slices/restaurants'
-import restaurantEndpoint from '../services/api'
+import servicesEndpoint from '../services/api'
+import ModalSlice from './slices/ModelManager'
 
 export const store = configureStore({
   reducer: {
-    [restaurantEndpoint.reducerPath]: restaurantEndpoint.reducer,
-    restaurantReducer: restaurantSlice
+    [servicesEndpoint.reducerPath]: servicesEndpoint.reducer,
+    modalManager: ModalSlice.reducer
   },
   middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware().concat(restaurantEndpoint.middleware),
+    getDefaultMiddleware().concat(servicesEndpoint.middleware),
 })
 
 export type RootState = ReturnType<typeof store.getState>

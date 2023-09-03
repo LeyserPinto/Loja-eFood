@@ -1,16 +1,37 @@
 import * as Icon from 'react-icons/ai'
 import {ModalContainer} from '../../global/styles/main.styles'
-import { ModalHead, ModalSections } from './style';
+import { ModalPrato, CloseModalButton, ModalSections, ModalCenter, ModalWrapper, WrapperContent, Texts } from './style';
+import { useDispatch, useSelector } from 'react-redux';
+import { OpenModal } from '../../store/slices/ModelManager';
+import { RootState } from '../../store';
+import { EnumAcoes } from '../../global/utils/Enum';
 
 const Modal = () => {
-    
-
+    const dispatch = useDispatch()
+    const {isModalOpen, acaoCodigo, prato} = useSelector((state: RootState) => state.modalManager)
     return (
-        <ModalContainer>
+        <ModalContainer isVisible={isModalOpen}>
             <ModalSections>
-                <ModalHead>
-                    <Icon.AiOutlineClose />
-                </ModalHead>
+                { acaoCodigo === EnumAcoes.ACAO_CHECKIN_PRATO && (
+                    <ModalCenter>
+                        <ModalPrato>
+                            <CloseModalButton onClick={() => dispatch(OpenModal(EnumAcoes.ACAO_CONSULTA))}>
+                                <Icon.AiOutlineClose />
+                            </CloseModalButton>   
+                            <ModalWrapper>
+                                <img src={prato.picture}/>
+                                <WrapperContent>
+                                    <Texts>
+                                        <h4>{prato.nome}</h4>
+                                        <p>{prato.descricao}</p>
+                                    </Texts>                                    
+                                    <button>Adicionar ao Carrinho - {prato.price}</button>
+                                </WrapperContent>
+                            </ModalWrapper>                         
+                        </ModalPrato>
+                    </ModalCenter>
+                )}
+                
             </ModalSections>
         </ModalContainer>
     )

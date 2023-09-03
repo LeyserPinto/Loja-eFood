@@ -8,7 +8,7 @@ const router = createBrowserRouter([
         element: <Home />
     },
     {
-        path: '/cardapio',
+        path: '/cardapio/:restauranteid',
         element: <Cardapio />
     } 
 ]);

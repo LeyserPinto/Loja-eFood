@@ -16,10 +16,10 @@ export const GlobalStyle = createGlobalStyle`
 `
 
 type ContainerProps = {
-  maxWidth?: string
+  maxwidth?: string
 }
 export const Container = styled.div<ContainerProps>`
-    max-width: ${(props) => props.maxWidth};
+    max-width: ${(props) => props.maxwidth || '100%'};
     margin: 0 auto;
 `
 export const Wrapper = styled.div<ContainerProps>`
@@ -51,15 +51,18 @@ export const ButtonLink = styled(Link)`
     line-height: 26px;
     text-align: center;
 `
-
-export const ModalContainer = styled.div`
+type ModalProps = {
+  isVisible: boolean;
+}
+export const ModalContainer = styled.div<ModalProps>`
   position: fixed;
   top: 0%;
   left: 0%;
   width: 100%;
   height: 100%;
-  z-index: 5; 
-  background-color: rgba(0, 0, 0, 0.5);
+  z-index: ${(props) => props.isVisible ? 5: -1}; 
+  display: ${(props) => props.isVisible ? 'block': 'none'};
+  background-color: rgba(0, 0, 0, 0.8);
   backdrop-filter: blur(2px);
 `
 export const ApiMessage = styled.p`

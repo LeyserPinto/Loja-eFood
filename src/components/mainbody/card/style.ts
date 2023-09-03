@@ -28,11 +28,8 @@ export const HeadTagSection = styled.div`
     display: flex;
     justify-content: flex-end;
     flex-wrap:wrap;
-    gap: 12px;
-
+    gap: 12px;  
     
-    
-
     & span {
         min-width: 61px;
         height: 26px;

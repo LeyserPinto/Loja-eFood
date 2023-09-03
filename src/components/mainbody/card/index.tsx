@@ -10,7 +10,7 @@ export const Card = ({nome, avaliacao, descricao, urlPortada, categories, id}: R
                 <img src={urlPortada} alt={nome} />
                 <S.HeadTagSection>
                     {categories.map(row => (
-                        <span key={`${id}-tag`}>{row}</span>
+                        <span key={`${row}`}>{row}</span>
                     ))}
                 </S.HeadTagSection>
             </S.HeadSection>
@@ -26,7 +26,7 @@ export const Card = ({nome, avaliacao, descricao, urlPortada, categories, id}: R
                     <p>{descricao}</p>
                 </S.Bodydescription>
                 <S.Bodybuttons>
-                    <S.Bodybutton to="/cardapio">Saiba mais</S.Bodybutton>
+                    <S.Bodybutton to={`/cardapio/${id}`}>Saiba mais</S.Bodybutton>
                 </S.Bodybuttons>
             </S.BodySection>
         </S.CardContainer>

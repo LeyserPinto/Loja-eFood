@@ -1,16 +1,14 @@
 import { ApiMessage, Container } from "../../global/styles/main.styles"
 import { Card } from "./card"
-import { Bodywrapper } from "./style"
+import { Bodywrapper, MainContainer } from "./style"
 import { useGetAllRestaurantsQuery } from "../../services/api"
 
 
 export const Mainbody = () => {
     const { data, isLoading, isError } = useGetAllRestaurantsQuery();
-    console.log(isLoading);
-    console.log('Erro:' + isError);
-
+    
     return (
-        <Container maxWidth="900px">
+        <MainContainer maxwidth="1248px">
             <Bodywrapper>
 
                 {isLoading && <ApiMessage>Carregando...</ApiMessage>}
@@ -29,7 +27,7 @@ export const Mainbody = () => {
                 ))}
                 
             </Bodywrapper>
-        </Container>
+        </MainContainer>
         
     )
 }

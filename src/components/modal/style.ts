@@ -8,19 +8,68 @@ export const ModalSections = styled.section`
     margin: 0 auto;
 `
 
-export const ModalHead = styled.div`
-    padding: 1em;
-    float: right;
-    display: flex;
-    width: 15%;
-    height: 80px;
-    justify-content: flex-end;
-    clear: both;
-
-    
+export const CloseModalButton = styled.button`
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    background-color: transparent;
+    outline: none;
+    cursor: pointer;
+    border:none;
     & svg {
-        font-size: ${fonts.big};
-        color: ${colors.fonts.secondary};
+        font-size: 22px;
+        color: ${colors.fonts.secondary};        
+    }
+`
+
+export const ModalCenter = styled.div`
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+`
+export const ModalPrato = styled.div`
+    padding: 32px;
+    background-color: ${colors.background.quaternary};
+    width: 1024px;
+    height: 344px;
+`
+
+export const ModalWrapper = styled.div`
+    width: 100%;
+    height: 100%;
+    display: flex;
+
+    & img {
+        width:280px;
+        height: 280px;
+        object-fit: cover;
+        object-position: center center;
+    }
+`
+
+export const WrapperContent = styled.section`
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 24px;
+    color: ${colors.fonts.secondary};
+    
+    & button {
+        padding: 2px;
+        width: 218px;
+        height: 24px;
+        border: none;
+        background: ${colors.background.secondary};
+        font-weight: 500;
+        font-size: ${fonts.small};
+        color: ${colors.fonts.primary};
         cursor: pointer;
+    }
+`
+export const Texts = styled.div`
+    & h4 {
+        font-size: 18px;
+        margin-bottom: 16px;
     }
 `

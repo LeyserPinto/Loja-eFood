@@ -1,15 +1,35 @@
+import { useState, useEffect } from 'react'
+import { Prato } from "../../../../global/utils/Models/prato"
 import * as S from "./styles"
+import { useDispatch } from 'react-redux';
+import { visualizarPrato } from '../../../../store/slices/ModelManager';
 
-const Pratocard = () => {
+const Pratocard = (props:Prato) => {
+    const [tempDescricao, setTempDescricao] = useState('');    
+
+    const dispatch = useDispatch()
+    useEffect(() => {
+      if(props.descricao.length > 200) {
+        let newText = props.descricao.substring(0, 187) + '...'
+        setTempDescricao(newText)
+      } else {
+        setTempDescricao(props.descricao)
+      }
+    
+      return () => {
+        setTempDescricao('')
+      }
+    }, [props.descricao])
+    
     return (
         <S.Cardcontainer>
             <S.HeadSection>
-                <img src="https://receitinhas.com.br/wp-content/uploads/2018/08/Sushi-filadelfia-uramaki-O-Djapa.jpg" alt="uramaki" />
+                <img src={props.picture} alt={props.nome} />
             </S.HeadSection>
             <S.BodySection>
-                <h3>Uramaki</h3>
-                <p>Refere-se a algo que está de cabeça para baixo. Assim são conhecidos os makis onde o arroz aparece por fora e seus ingredientes são envolvidos dentro de um pedaço de alga seca (nori).</p>
-                <button>Adicionar ao carrinho</button>
+                <h3>{props.nome}</h3>
+                <p>{tempDescricao}</p>
+                <button onClick={()=> dispatch(visualizarPrato(props))}>Adicionar ao carrinho</button>
             </S.BodySection>
         </S.Cardcontainer>
     )
