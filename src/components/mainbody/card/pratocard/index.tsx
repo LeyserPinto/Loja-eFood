@@ -29,7 +29,7 @@ const Pratocard = (props:Prato) => {
             <S.BodySection>
                 <h3>{props.nome}</h3>
                 <p>{tempDescricao}</p>
-                <button onClick={()=> dispatch(visualizarPrato(props))}>Adicionar ao carrinho</button>
+                <button onClick={()=> dispatch(visualizarPrato(props))}>Mais Detalhes</button>
             </S.BodySection>
         </S.Cardcontainer>
     )

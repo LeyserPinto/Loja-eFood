@@ -1,13 +1,17 @@
+import { useSelector } from 'react-redux'
 import Logo from '../../../assets/img/logo.svg'
 import { Container } from '../../../global/styles/main.styles'
 import { Restaurant } from '../../../global/utils/Models/restaurants'
 import * as S from './styles'
+import { RootState } from '../../../store'
 
 type RestaurantProps = {
     restaurante?: Restaurant[]
 }
 
-const HeaderCardapio = ({restaurante}:RestaurantProps) => {
+const HeaderCardapio = ({restaurante}:RestaurantProps) => {    
+    const { carrinho } = useSelector((state:RootState) => state.carrinhoManager)
+
     return (
         <Container>
             <S.Header>
@@ -17,7 +21,7 @@ const HeaderCardapio = ({restaurante}:RestaurantProps) => {
 
                     <S.CarrinhoSection>
                         <p>
-                            <span>0</span> produto&#40;s&#41; no carrinho
+                            <span>{carrinho.length}</span> produto&#40;s&#41; no carrinho
                         </p>
                     </S.CarrinhoSection>
                 </S.HeadWrapper>

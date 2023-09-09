@@ -40,7 +40,7 @@ export const BodySection = styled.div`
         height: 24px;
         border: none;
         background: ${colors.background.secondary};
-        font-weight: 500;
+        font-weight: 700;
         font-size: ${fonts.small};
         color: ${colors.fonts.primary};
         cursor: pointer;

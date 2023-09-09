@@ -52,7 +52,7 @@ export const ButtonLink = styled(Link)`
     text-align: center;
 `
 type ModalProps = {
-  isVisible: boolean;
+  isvisible: boolean | undefined;
 }
 export const ModalContainer = styled.div<ModalProps>`
   position: fixed;
@@ -60,8 +60,8 @@ export const ModalContainer = styled.div<ModalProps>`
   left: 0%;
   width: 100%;
   height: 100%;
-  z-index: ${(props) => props.isVisible ? 5: -1}; 
-  display: ${(props) => props.isVisible ? 'block': 'none'};
+  z-index: ${(props) => props.isvisible ? 5: -1}; 
+  display: ${(props) => props.isvisible ? 'block': 'none'};
   background-color: rgba(0, 0, 0, 0.8);
   backdrop-filter: blur(2px);
 `
