@@ -8,6 +8,8 @@ export const Header = styled(HeaderWrapper)`
     height: 186px;
 `
 export const HeadWrapper = styled(WrapperFlexCenter)`
+    margin: 0 auto;
+    max-width: 1024px;
     width: 80%;
     flex-direction: row;
     justify-content: space-between;
@@ -39,6 +41,8 @@ export const HeadHero = styled.section<HeroProps>`
 `
 
 export const HeroWrapper = styled(WrapperFlexCenter)`
+    margin: 0 auto;
+    max-width: 1024px;
     width: 80%;
     height: 70%;    
     flex-direction: column;

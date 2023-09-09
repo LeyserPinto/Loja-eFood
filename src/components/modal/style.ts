@@ -49,12 +49,10 @@ export const ModalWrapper = styled.div`
 `
 
 export const WrapperContent = styled.section`
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    height: 100%;
     margin-left: 24px;
     color: ${colors.fonts.secondary};
-    
+
     & button {
         padding: 2px;
         width: 218px;
@@ -68,8 +66,18 @@ export const WrapperContent = styled.section`
     }
 `
 export const Texts = styled.div`
+    height: 90%;
     & h4 {
         font-size: 18px;
         margin-bottom: 16px;
+    }
+    & section {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 80%;
+        font-weight: 300;
+        line-height: 22px; 
+        font-size: 14px;
     }
 `

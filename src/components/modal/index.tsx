@@ -23,9 +23,12 @@ const Modal = () => {
                                 <WrapperContent>
                                     <Texts>
                                         <h4>{prato?.nome}</h4>
-                                        <p>{prato?.descricao}</p>
+                                        <section>
+                                            <p>{prato?.descricao}</p>
+                                            <p>Serve de 3 a 3 pessoas</p>
+                                        </section>
                                     </Texts>                                    
-                                    <button>Adicionar ao Carrinho - {prato?.price}</button>
+                                    <button>Adicionar ao Carrinho - R$ {prato?.price}</button>
                                 </WrapperContent>
                             </ModalWrapper>                         
                         </ModalPrato>

@@ -12,14 +12,14 @@ const HeaderCardapio = ({restaurante}:RestaurantProps) => {
         <Container>
             <S.Header>
                 <S.HeadWrapper>
-                <S.RestaurantLink to='/'>Restaurantes</S.RestaurantLink>
-                <img src={Logo}/>
+                    <S.RestaurantLink to='/'>Restaurantes</S.RestaurantLink>
+                    <img src={Logo}/>
 
-                <S.CarrinhoSection>
-                    <p>
-                        <span>0</span> produto&#40;s&#41; no carrinho
-                    </p>
-                </S.CarrinhoSection>
+                    <S.CarrinhoSection>
+                        <p>
+                            <span>0</span> produto&#40;s&#41; no carrinho
+                        </p>
+                    </S.CarrinhoSection>
                 </S.HeadWrapper>
             </S.Header>
             {
