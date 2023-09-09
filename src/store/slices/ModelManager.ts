@@ -32,14 +32,18 @@ const ModalSlice = createSlice({
 
             }
         },
-        OpenModal: (state, action: PayloadAction<number>)  => {
+        visualizarCarrinho: (state) => {
             state.isModalOpen = !state.isModalOpen
-            if(action?.payload) {
-                state.acaoCodigo = action.payload
+            state.acaoCodigo    = EnumAcoes.ACAO_CHECKOUT_ORDER
+        },
+        OpenModal: (state, action: PayloadAction<number>)  => {
+            state.acaoCodigo = action.payload
+            if(action?.payload === EnumAcoes.ACAO_CONSULTA && state.isModalOpen !== false) {
+                state.isModalOpen = !state.isModalOpen
             }
         }
     }
 })
 
-export const { OpenModal, visualizarPrato } = ModalSlice.actions
+export const { OpenModal, visualizarPrato, visualizarCarrinho } = ModalSlice.actions
 export default ModalSlice

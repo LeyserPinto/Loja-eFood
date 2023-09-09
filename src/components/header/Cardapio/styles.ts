@@ -28,6 +28,7 @@ export const CarrinhoSection = styled.div`
     color: ${colors.fonts.primary};
     font-weight: 700;
     font-size: ${fonts.medium};
+    cursor: pointer;
 `
 type HeroProps = {
     restaurantbg: string

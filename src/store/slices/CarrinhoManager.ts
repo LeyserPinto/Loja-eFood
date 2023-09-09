@@ -13,18 +13,13 @@ const CarrinhoSlice = createSlice({
     name: 'Carrinho',
     initialState,
     reducers: {
-        add: (state, actions: PayloadAction<Prato>) => {
-            const exists = state.carrinho.findIndex(row => ((row.nome === actions.payload.nome) && (row.id == actions.payload.id)))
-            
-            if(exists && exists !== undefined) {
-                alert('Produto já adicionado ao Carrinho');
+        add: (state, actions: PayloadAction<Prato | undefined>) => {
+            if(actions.payload !== undefined) {
+                state.carrinho.push(actions?.payload)
             }
-
-            state.carrinho.push(actions.payload)
-
         },
-        remove: () => {
-
+        remove: (state, actions: PayloadAction<Omit<Prato, 'descricao' | 'picture' | 'price'>>) => {            
+            state.carrinho = state.carrinho.filter((p) => p.nome !== actions.payload.nome)            
         }
     }
 })

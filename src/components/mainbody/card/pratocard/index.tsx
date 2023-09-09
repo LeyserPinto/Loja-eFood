@@ -8,6 +8,7 @@ const Pratocard = (props:Prato) => {
     const [tempDescricao, setTempDescricao] = useState('');    
 
     const dispatch = useDispatch()
+    
     useEffect(() => {
       if(props.descricao.length > 200) {
         const newText = props.descricao.substring(0, 187) + '...'
