@@ -25,7 +25,7 @@ const Modal = () => {
                                         <h4>{prato?.nome}</h4>
                                         <section>
                                             <p>{prato?.descricao}</p>
-                                            <p>Serve de 3 a 3 pessoas</p>
+                                            <p>Serve de 2 a 3 pessoas</p>
                                         </section>
                                     </Texts>                                    
                                     <button>Adicionar ao Carrinho - R$ {prato?.price}</button>

@@ -66,7 +66,9 @@ export const WrapperContent = styled.section`
     }
 `
 export const Texts = styled.div`
-    height: 90%;
+    height: 80%;
+    
+    margin-bottom: 16px;
     & h4 {
         font-size: 18px;
         margin-bottom: 16px;
