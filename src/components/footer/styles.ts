@@ -1,6 +1,6 @@
 import { styled } from "styled-components";
 import { Wrapper, WrapperFlexCenter } from "../../global/styles/main.styles";
-import { colors, fonts } from "../../global/styles/main.vars";
+import { colors } from "../../global/styles/main.vars";
 
 export const FooterWrapper = styled(Wrapper) `
     height: 250px;
