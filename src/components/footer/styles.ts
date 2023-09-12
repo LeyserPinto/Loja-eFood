@@ -17,7 +17,7 @@ export const FooterFlex = styled(WrapperFlexCenter) `
     & p {
         width: 70%;
         text-align: center;
-        font-size: ${fonts.tiny};
+        font-size: 10px;
         font-weight: 400;
         color: ${colors.fonts.primary};
     }
