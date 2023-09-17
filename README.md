@@ -21,7 +21,8 @@ It´s the final project is part of Fullstack Course in Python by EBAC school �
 ![image](https://github.com/LeyserPinto/Loja-eFood/assets/59316466/0e5cfdbe-f2ca-4b25-a6a4-bb2d5bc9187a)
 
 ## Sucess Screens 🥅
-![image](https://github.com/LeyserPinto/Loja-eFood/assets/59316466/d4583868-d7e6-4c62-ba0a-eb29b5a9af7f)
+![image](https://github.com/LeyserPinto/Loja-eFood/assets/59316466/58f18a54-6ce1-4b29-8c23-48cdecea8813)
+
 
 
 
