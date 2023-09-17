@@ -60,7 +60,7 @@ export const ModalContainer = styled.div<ModalProps>`
   left: 0%;
   width: 100%;
   height: 100%;
-  z-index: ${(props) => props.isvisible ? 5: -1}; 
+  z-index: ${(props) => props.isvisible ? 5 : -1}; 
   display: ${(props) => props.isvisible ? 'block': 'none'};
   background-color: rgba(0, 0, 0, 0.8);
   backdrop-filter: blur(2px);

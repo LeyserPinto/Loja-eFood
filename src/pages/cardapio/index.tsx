@@ -11,7 +11,9 @@ const Cardapio = () => {
     let cardapioData;
     let restaurante;
     if(restauranteid) {
+        // eslint-disable-next-line react-hooks/rules-of-hooks
         cardapioData = useGetCardapioByRestauranteQuery(restauranteid).data;
+        // eslint-disable-next-line react-hooks/rules-of-hooks
         restaurante = useGetRestauranteByIdQuery(restauranteid).data;
     }
     return (

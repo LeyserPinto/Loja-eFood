@@ -18,5 +18,6 @@ export const colors = {
         primary: '#E66767',
         secondary: '#FFEBD9',
         ternary: '#FFFFFF',
+        quaternary: '#4B4B4B' /*BLACK*/
     }
 }

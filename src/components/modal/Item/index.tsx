@@ -14,7 +14,7 @@ export const ModalItem = () => {
 
     const adicionarAoCarrinho = () => {
         dispatch(add(prato))
-        dispatch(OpenModal(EnumAcoes.ACAO_CONSULTA))
+        dispatch(OpenModal(EnumAcoes.ACAO_CHECKOUT_ORDER))
     }
 
     return (

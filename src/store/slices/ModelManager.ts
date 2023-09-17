@@ -36,6 +36,9 @@ const ModalSlice = createSlice({
             state.isModalOpen = !state.isModalOpen
             state.acaoCodigo    = EnumAcoes.ACAO_CHECKOUT_ORDER
         },
+        executarOrder: (state) => {
+            state.acaoCodigo    = EnumAcoes.ACAO_CHECKOUT
+        },
         OpenModal: (state, action: PayloadAction<number>)  => {
             state.acaoCodigo = action.payload
             if(action?.payload === EnumAcoes.ACAO_CONSULTA && state.isModalOpen !== false) {

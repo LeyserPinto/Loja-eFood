@@ -20,7 +20,7 @@ export const HeadSection = styled.div`
 export const BodySection = styled.div`
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-around;
     gap: 8px;
     font-size: ${fonts.small};
     color: ${colors.fonts.secondary};
@@ -32,6 +32,7 @@ export const BodySection = styled.div`
     & p {
         font-size: ${fonts.small};
         margin: 5px 0px;
+        min-height: 85px;
     }
 
     & button {
