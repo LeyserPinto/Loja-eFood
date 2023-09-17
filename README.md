@@ -1,27 +1,30 @@
 # React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+It´s the final project is part of Fullstack Course in Python by EBAC school 🔥 made with React JS + Typescript and using React Redux for state managements.
 
-Currently, two official plugins are available:
+## Home Section 🥅
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![image](https://github.com/LeyserPinto/Loja-eFood/assets/59316466/3998fe36-b599-4db7-a8d2-87777f5f7c34)
 
-## Expanding the ESLint configuration
+## Prato´s Sections 🥅
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+![image](https://github.com/LeyserPinto/Loja-eFood/assets/59316466/bc663325-e68c-449f-acf5-a5366e2cdbae)
 
-- Configure the top-level `parserOptions` property like this:
+## Card Sections 🥅
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+![image](https://github.com/LeyserPinto/Loja-eFood/assets/59316466/573110ff-cdfc-4a4c-a53d-8cea469b3723)
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Delivery Form 🥅
+![image](https://github.com/LeyserPinto/Loja-eFood/assets/59316466/1b07ff97-6d4e-4fe0-be0d-4ad40fb37608)
+
+## Billing Form 🥅
+![image](https://github.com/LeyserPinto/Loja-eFood/assets/59316466/0e5cfdbe-f2ca-4b25-a6a4-bb2d5bc9187a)
+
+## Sucess Screens 🥅
+![image](https://github.com/LeyserPinto/Loja-eFood/assets/59316466/d4583868-d7e6-4c62-ba0a-eb29b5a9af7f)
+
+
+
+
+
+
