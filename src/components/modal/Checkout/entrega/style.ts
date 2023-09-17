@@ -45,6 +45,7 @@ export const BotaoGroup = styled.div`
     display: flex;
     flex-direction: column;
     gap: 8px;
+    
     & button {
         background: ${colors.background.secondary};
         font-weight: 700;

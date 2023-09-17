@@ -31,6 +31,11 @@ const Modal = () => {
 
                 {acaoCodigo === EnumAcoes.ACAO_CHECKOUT || acaoCodigo === EnumAcoes.ACAO_PAYMENT ?(<ModalCheckout />):''}
 
+                {
+                    acaoCodigo === EnumAcoes.ACAO_CHECKOUT ||
+                    acaoCodigo === EnumAcoes.ACAO_PAYMENT  ||
+                    acaoCodigo === EnumAcoes.ACAO_SUCESS ? (<ModalCheckout />): ''
+                }
             </ModalSections>            
         </ModalContainer>
     )

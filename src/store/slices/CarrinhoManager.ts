@@ -20,11 +20,14 @@ const CarrinhoSlice = createSlice({
         },
         remove: (state, actions: PayloadAction<Omit<Prato, 'descricao' | 'picture' | 'price'>>) => {            
             state.carrinho = state.carrinho.filter((p) => p.nome !== actions.payload.nome)            
+        },
+        reset: (state) => {            
+            state.carrinho = []            
         }
     }
 })
 
 
 
-export const { add, remove } = CarrinhoSlice.actions
+export const { add, remove, reset } = CarrinhoSlice.actions
 export default CarrinhoSlice
